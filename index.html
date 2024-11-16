@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Vlad Lunachev CV</title>
+    <style>
+      @media print {
+        @page {
+          size: A4;
+          margin: 1cm;
+        }
+        body {
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
+        }
+        .page {
+          box-shadow: none !important;
+          padding: 0 !important;
+        }
+        .avatar {
+          display: none !important;
+          width: 210px !important;
+          height: 210px !important;
+        }
+        h1 {
+          font-size: 1.9rem !important;
+        }
+        .subtitle {
+          font-size: 1rem !important;
+          line-height: 1.3 !important;
+        }
+        button {
+          display: none !important;
+        }
+        .qrcode {
+          opacity: 1 !important;
+        }
+        /* .extra {
+          display: none !important;
+        } */
+      }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+
+      .tooltip .tooltipimg {
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        left: 105%;
+        top: -100%;
+        opacity: 0;
+        transition: opacity 0.3s;
+        width: 480px;
+        max-width: none;
+        height: auto;
+      }
+
+      .tooltip:hover .tooltipimg {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-200 min-h-screen flex justify-center p-8 min-w-[26cm] overflow-scroll">
+    <div class="max-w-[24cm] mw-full">
+      <div class="page p-8 flex bg-white rounded-2xl shadow-xl">
+        <!-- Sidebar -->
+        <div class="w-1/3 pr-8">
+          <!-- Profile -->
+          <div class="mb-8">
+            <div class="avatar w-60 h-60 mb-4 mt-4">
+              <img src="image.png" class="rounded-full w-full h-full object-cover" />
+            </div>
+
+            <h1 class="text-[2.15rem] font-bold text-gray-900 leading-tight">Vlad Lunachev</h1>
+            <p class="subtitle text-lg text-gray-500 mb-6 leading-tight">Product manager, Developer, Inventor, Entrepreneur</p>
+          </div>
+
+          <!-- Contacts -->
+          <div class="mb-8">
+            <p class="text-sm text-gray-500">
+              <a href="https://www.linkedin.com/in/vladlunachev/" target="_blank" class="hover:text-gray-700 underline">linkedin.com/in/vladlunachev/</a>
+              <br />
+              <a href="mailto:v.lunachev@gmail.com" class="hover:text-gray-700 underline">v.lunachev@gmail.com</a>
+              <br />
+              <a href="tel:+381631234567" class="hover:text-gray-700 underline">+381 062 1438039</a>
+              <br />
+              25 Oct 1989 (35)
+              <br />
+              Belgrade, Serbia
+            </p>
+          </div>
+
+          <!-- Professional Summary -->
+          <div class="mb-8">
+            <h2 class="text-base font-semibold text-gray-900">Professional Summary</h2>
+            <p class="text-sm text-gray-500">I'm an inventor and entrepreneur with a broad skill set in product development, UX design, business understanding, and a passion for building and improving things around me. With over 10 years of experience and a track record of developing technologies and startups, I focus on creating unique, holistic / multifaceted solutions and impactful products that enhance people's lives.</p>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="mb-8">
+            <h2 class="text-base font-semibold text-gray-900">Software Tech Stack</h2>
+            <p class="text-sm text-gray-500">Python, Javascript, HTML, CSS, Tailwind, Electron.js, C++/Swift executable binaries, Windows and MacOS API, Django/DRF, Postgres, Caddy, Docker/Docker Compose, Git, CI/CD, Typesense keyword and vector search, RAG, AI</p>
+          </div>
+
+          <!-- Portfolio -->
+          <div class="mb-8">
+            <h2 class="text-base font-semibold text-gray-900">Portfolio</h2>
+            <p class="text-sm text-gray-500">
+              <a href="https://docs.google.com/document/d/1l2uARjOlMpknnrkTARAT8n3DCtTmC0jwE6MJe_QGz6s/edit?usp=sharing" target="_blank" class="underline inline-flex items-center">
+                Coding Portfolio
+                <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1 text-gray-500" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <br />
+              <a href="https://paper.dropbox.com/published/Vlad-Lunachev-Portfolio--CaiUMzsTUdXMa2yhT_wgW5UkBg-bpTiQS4jvgl2m0T8ULhoYbG" target="_blank" class="underline inline-flex items-center">
+                Hardware Builds & Ideas
+                <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1 text-gray-500" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </p>
+          </div>
+
+          <!-- Domain Knowledge -->
+          <div class="mb-8">
+            <h2 class="text-base font-semibold text-gray-900">Domain Knowledge</h2>
+            <p class="text-sm text-gray-500">Knowledge Management Tools, EdTech, Biohacking/MedTech, Consumer AgTech, Maker Movement, 3D Printing, Consumer Devices, Startups</p>
+          </div>
+
+          <!-- Media Coverage -->
+          <div class="mb-8">
+            <div class="relative inline-flex items-center">
+              <a href="https://paper.dropbox.com/doc/Publications-interviews-talks-2007-2021-ecpVVWt5WEANcUNeoopcU" target="_blank" class="text-base font-semibold underline text-gray-900 inline-flex items-center">
+                Media Coverage
+                <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1 text-gray-500" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Patents -->
+          <div class="mb-8">
+            <h2 class="text-base font-semibold text-gray-900">Patents</h2>
+            <p class="text-sm text-gray-500">
+              US 62910177, RU 98236009
+              <br />
+              RU 20394765
+            </p>
+          </div>
+
+          <!-- Hobbies -->
+          <div class="hidden mb-8">
+            <h2 class="text-base font-semibold text-gray-900">Hobbies</h2>
+            <p class="text-sm text-gray-500"></p>
+          </div>
+
+          <!-- Languages -->
+          <div class="mb-8">
+            <h2 class="text-base font-semibold text-gray-900">Languages</h2>
+            <p class="text-sm text-gray-500">Russian, English</p>
+          </div>
+
+          <!-- Online version QR code -->
+          <div class="opacity-0 qrcode">
+            <a href="" target="_blank" class="text-base font-semibold underline text-gray-900 inline-flex items-center mb-1 pl-0.5">Online version</a>
+            <div id="qrcode" class="w-28 h-28"></div>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="w-2/3">
+          <!-- Timeline starts directly -->
+          <ol class="relative border-s border-gray-200">
+            <li class="mb-4 ms-4 break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">April 2021 - now</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Inventor and Founder of
+                <span class="font-semibold">Hypershots app</span>
+                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Startup</span>
+              </h3>
+              <h4 class="text-sm text-black">Windows / MacOS app for creating and managing smart screenshots</h4>
+              <p class="mb-4 text-sm font-normal text-gray-500">
+                Developing new Hypermedia formats, e.g., transforming screenshots into "Hypershots" (screenshot + context + interactive features) and clipboard clips into "Hyperclips", etc. Secured a $30k pre-seed investment in early 2024; the app is now in alpha testing. Tech stack of a desktop app (Windows/MacOS). Frontend: ElectronJS (JS, HTML, Tailwind), С++/Swift native executables, plus Chrome Extension. Backend: VPS, Docker Compose, Django DRF, Postgres, Typesense, Caddy, Github Actions CI/CD.
+                <a href="https://youtu.be/bNYk1v3AbUc" target="_blank" class="underline cursor-pointer">Video Demo</a>
+                and
+                <a href="https://rebrand.ly/hypershots-app-pitch-deck" target="_blank" class="underline cursor-pointer">Pitch Deck</a>
+              </p>
+            </li>
+
+            <li class="mb-4 ms-4 break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">December 2020 - August 2023</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Product and analytics R&D at
+                <a href="https://tripleten.com/" target="_blank" class="font-semibold underline cursor-pointer">TripleTen</a>
+                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Employment</span>
+              </h3>
+              <h4 class="text-sm text-black">Edtech company / Coding Bootcamp</h4>
+              <p class="mb-4 text-sm font-normal text-gray-500">Regularly crafted detailed CJMs, identifying and resolving bottlenecks and bugs in the user flow, which led to improved conversion rates. Invented and prototyped three UX-enhancing features: "Expected Result," which reduced error identification time in assignments by 50%; "Code Snippets Search" and "Clipboard Notes" integrating a clipboard manager for semi-automated note-taking during learning sessions. Developed analytics tasks for profiling student behavior and wrote two tracking tools—an in-product activity tracker monitoring detailed student activity on a per-second basis, and a landing page behavior tracker analyzing visitor trajectories and time spent on each segment. Initiated and managed partnerships with two analytics firms: one focused on analyzing in-product student behavior, and the other on refining lead scoring models to assess lead quality, contributing to lowering acquisition cost.</p>
+            </li>
+
+            <li class="mb-4 ms-4 break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">October 2019 - December 2020</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Inventor & Founder of
+                <a href="https://medium.com/@VladLunachev/about-autogreens-worlds-first-fully-automated-robofarm-for-home-or-restaurant-and-the-future-of-b18db44042e3" target="_blank" class="tooltip font-semibold cursor-pointer underline">
+                  AutoGreens
+                  <!-- <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*QSnA3wisTX2izmQe0INz-Q.gif" class="tooltipimg rounded-lg shadow-lg border border-gray-200" /> -->
+                </a>
+                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Startup</span>
+              </h3>
+              <h4 class="text-sm text-black">World's first full-cycle automated robofarm for homes and restaurants</h4>
+              <p class="mb-4 text-sm font-normal text-gray-500">
+                Handled all aspects of mechanical and industrial design, prototyping, and product development, achieving a working prototype in just four months. Drafted all visual materials, including design sketches and illustrations, and authored extensive content totaling over 20,000 characters for articles and a crowdfunding campaign. Prepared a comprehensive marketing and media outreach strategy targeting 500 relevant contacts. Featured in the
+                <a href="https://www.trendhunter.com/slideshow/2020-robot" target="_blank" class="underline cursor-pointer">Top 100 Robot Innovations of 2020</a>
+                and the
+                <a href="https://www.trendhunter.com/slideshow/2021-unique-trends" target="_blank" class="underline cursor-pointer">Top 100 Unique Trends of 2021</a>
+                . Despite significant progress, fundraising efforts were impacted by the COVID-19 pandemic. Eventually, I decided to shift from hardware to software development, seeking a more scalable and flexible medium for my ideas.
+              </p>
+            </li>
+
+            <li class="mb-4 ms-4 extra break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">July 2019 - September 2019</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Founder in Residence at
+                <a href="https://en.wikipedia.org/wiki/Entrepreneur_First" target="_blank" class="font-semibold underline cursor-pointer">Entrepreneur First</a>
+                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Accelerator</span>
+              </h3>
+              <p class="mb-4 text-sm font-normal text-gray-500">EF is an international talent investor, which supports individuals in building technology companies. I got selected among 35 people out of 1500 applicants for the Hong Kong HK3 batch.</p>
+            </li>
+
+            <li class="mb-4 ms-4 extra break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">June 2019 - July 2019</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Writer of a
+                <a href="https://medium.com/@VladLunachev/" target="_blank" class="font-semibold underline cursor-pointer">100 Stories Marathon</a>
+                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Project</span>
+              </h3>
+              <h4 class="text-sm text-black">Consolidated 15 years of inventions, ideas, and hacks into a blog</h4>
+              <p class="mb-4 text-sm font-normal text-gray-500">Inspired by Kevin Kelly's "1000 True Fans" to build a community-driven business model. Wrote 50 stories in 50 days (over 100,000 characters), consolidating work from ages 15 to 30. Midway, joined an accelerator program, pausing the project but developing a 100-topic content plan. This experience enhanced my understanding of content creation, audience engagement, and balancing production with promotion.</p>
+            </li>
+
+            <li class="mb-4 ms-4 extra break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">November 2018 - December 2018</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Design and Production of
+                <a href="https://photos.google.com/share/AF1QipN9ihjBw14pLOGhBolx1inO_mux8LXGwJmuoAxPCKGpt9Faw3JlxnIlEoPApR-Cqg?key=SmRCamdnbnU0UzdPczZVTzNITlg2NWREWUlSV3FR" target="_blank" class="font-semibold underline cursor-pointer">Timeframe</a>
+                <span class="bg-zinc-100 text-zinc-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Small Production</span>
+              </h3>
+              <p class="mb-4 text-sm font-normal text-gray-500">Redesigned and produced an improved version of a kinetic art frame inspired by Jeff Lieberman's Slow Dance frame. Manufactured 100 units for sale and gifts. Enhanced product performance by resolving noise issues through innovative use of soft silicone molding for the vibrating mechanism.</p>
+            </li>
+
+            <li class="mb-4 ms-4 extra break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">September 2018 - October 2018</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Rapid Prototyping for
+                <a href="https://hydrop.ru/" target="_blank" class="font-semibold underline cursor-pointer">Hydrop</a>
+                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">R&D Gig</span>
+              </h3>
+              <p class="mb-4 text-sm font-normal text-gray-500">Developed a proof-of-concept for a Nespresso-like household detergents machine. Hacked the electronics and modified the internal mechanisms of an existing Nespresso machine and capsules to demonstrate the feasibility of their concept.</p>
+            </li>
+
+            <li class="mb-4 ms-4 extra break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">March 2018 - August 2018</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Co-founder and CPO of
+                <span class="font-semibold">BioDis</span>
+                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Startup</span>
+              </h3>
+              <h4 class="text-sm text-black">Biological Disobedience - marketplace for wellness products / services</h4>
+              <p class="mb-4 text-sm font-normal text-gray-500">Led product development and content strategy, creating a mind map of biohacking tactics converted into products, articles, and protocols. The pilot run revealed scaling challenges for time-intensive wellness protocols and limited market demand in Moscow, leading to a decision to pause the project.</p>
+            </li>
+
+            <li class="mb-4 ms-4 break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">March 2018 - December 2018</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Staff at
+                <span class="font-semibold">Skolkovo Institute of Technology</span>
+                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Employment</span>
+              </h3>
+              <!-- <h4 class="text-sm text-black">Biological Disobedience - marketplace for wellness products and services</h4> -->
+              <p class="mb-4 text-sm font-normal text-gray-500">Contributed to an internal startup developing AI models for analyzing medical imaging data, like MRI, CT, and X-ray.</p>
+            </li>
+
+            <li class="mb-4 ms-4 extra break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">March 2018 - April 2018</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Proof-of-concept for
+                <a href="https://medium.com/@VladLunachev/story-015-49df95059ea3" target="_blank" class="font-semibold underline cursor-pointer">HyperFood</a>
+                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Project / Research</span>
+              </h3>
+              <h4 class="text-sm text-black">A personalized, automated nutrition system based on biometric feedback</h4>
+              <p class="mb-4 text-sm font-normal text-gray-500">Completed a successful proof-of-concept for an on-demand nutrition system personalized to individual needs. Consumed an 80-component custom cocktail over a month, monitoring health via bloodwork and gaining insights for further development. Conceptualized a system using a mixer, cloud platform, and biometric devices to create a feedback loop for optimizing nutrition. Featured on tv and in a radio interview.</p>
+            </li>
+
+            <li class="mb-4 ms-4 break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">October 2017 - November 2017</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Inventor and Founder of
+                <a href="https://medium.com/@VladLunachev/story-002-e172da160d3f" target="_blank" class="font-semibold underline cursor-pointer">BeamCNC</a>
+                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Startup</span>
+              </h3>
+              <h4 class="text-sm text-black">A unique computer-controlled drilling machine</h4>
+              <p class="mb-4 text-sm font-normal text-gray-500">
+                Designed and prototyped an original
+                <a href="https://github.com/vladlunachev/BeamCNC" target="_blank" class="underline cursor-pointer">open-sourced</a>
+                CNC drilling machine capable of transforming common lumber into a life-size modular construction system called Grid Beam. Developed a working prototype within approximately 1.5 months and launched a crowdfunding campaign, gaining valuable experience and understanding the importance of marketing and promotion. The project was featured in publications on Hackaday, Core77, Maker Update, Wevolver, and TrendHunter. Regularly receive inquiries for open-source designs with positive feedback, indicating interest in the concept. BeamCNC contributes to the broader vision of decentralized manufacturing, similar to how digital designs + plywood + a CNC router, or digital designs + plastic filament + a 3D printer, enable local production.
+              </p>
+            </li>
+
+            <li class="mb-4 ms-4 break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">June 2016 - October 2017</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                CTO at
+                <span class="font-semibold">Genetoolbox</span>
+                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Employment</span>
+              </h3>
+              <h4 class="text-sm text-black">A portable all-in-one PCR medical diagnostic device</h4>
+              <p class="mb-4 text-sm font-normal text-gray-500">Managed a multidisciplinary team consisting of a biotech engineer, an electrical engineer, a software engineer, a mechanical engineer, and a supply manager. Led all aspects of industrial and mechanical design, prototyping, and small-batch manufacturing of the device and consumables—microfluidic chips. Oversaw outsourced developers and contractors. Promoted in-house rapid prototyping by acquiring a 3D printer and renting a CNC router, which drastically accelerated the development process. Successfully built a working prototype from scratch in approximately 8 months. Left the company after completing the prototype at the stage ready for certification and testing.</p>
+            </li>
+
+            <li class="mb-4 ms-4 break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">September 2016 - May 2017</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Staff at
+                <a href="https://mospolytech.ru/en/" target="_blank" class="font-semibold underline cursor-pointer">Moscow Polytechnic University</a>
+                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Employment</span>
+              </h3>
+              <!-- <h4 class="text-sm text-black">A portable all-in-one PCR medical diagnostic device</h4> -->
+              <p class="mb-4 text-sm font-normal text-gray-500">Guided and supported student project teams in a project-based learning. Provided mentorship and curated project development to enhance practical skills and ensure project success.</p>
+            </li>
+
+            <li class="mb-4 ms-4 extra break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">January 2016 - June 2016</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Co-founder of
+                <a href="https://vk.com/cookielabs" target="_blank" class="font-semibold underline cursor-pointer">Cookie Labs</a>
+                <span class="bg-zinc-100 text-zinc-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Small Production</span>
+              </h3>
+              <h4 class="text-sm text-black">Custom 3D-Printed cookies</h4>
+              <p class="mb-4 text-sm font-normal text-gray-500">
+                Designed and 3D-printed custom cookie cutters using CAD software. Sold approximately 5,000 pieces, primarily to businesses like
+                <a href="https://www.instagram.com/p/BEI_sDwMbQa/" target="_blank" class="text-gray-500 underline cursor-pointer">Land Rover</a>
+                for branded corporate gifts, replacing generic candies at receptions. Additionally, expanded into the holiday market by selling cookies with festive symbols during holidays. Despite several pivots, determined the business model was not profitable enough to continue.
+              </p>
+            </li>
+
+            <li class="mb-4 ms-4 extra break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">June 2015 - February 2016</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Co-founder of
+                <a href="https://www.chitaitext.ru/novosti/skladnaya-realnost/" target="_blank" class="font-semibold underline cursor-pointer">VRStore Cardboard</a>
+                <span class="bg-zinc-100 text-zinc-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Small Production</span>
+              </h3>
+              <p class="mb-4 text-sm font-normal text-gray-500">
+                <a href="https://youtu.be/6RTa0kGj15s" target="_blank" class="text-gray-500 underline cursor-pointer">Improved and redesigned the Google Cardboard VR headset</a>
+                for better production and user experience. Fixed flap tear issues, modified the folding design, added tap windows and legs for small phones. Designed branding and instructions, and set up manufacturing processes. Sold approximately 3,000 units, primarily B2B as branded corporate gifts.
+              </p>
+            </li>
+
+            <li class="mb-4 ms-4 extra break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">January 2015 - February 2016</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Co-founder of
+                <a href="https://paper.dropbox.com/published/Cardboard-Furniture--CangGq0oQXWp7K8YF_hE6wxUBg-v0vLNxGMsscGwXx2c9epACG" target="_blank" class="font-semibold underline cursor-pointer">Cardboard Furniture</a>
+                <span class="bg-zinc-100 text-zinc-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Small Production</span>
+              </h3>
+              <p class="mb-4 text-sm font-normal text-gray-500">Developed designs of cardboard furniture, experimenting with prototyping techniques. Sold 50 pieces, acquiring hands-on experience in production and sales. Expanded into education by leading a Cardboard Furniture Design Course for 13-14-year-old students at the School of Design "Tochka". Curated a nomination in an all-Russian design contest for school students, including organizing workshops. Gained initial teaching experience, inspiring students through hands-on projects and creative exploration.</p>
+            </li>
+
+            <li class="mb-4 ms-4 extra break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">March 2015</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Ideator and organizer of
+                <a href="https://vk.com/gadgetstroy2015" target="_blank" class="font-semibold underline cursor-pointer">Prototyping Contest</a>
+                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Project</span>
+              </h3>
+              <p class="mb-4 text-sm font-normal text-gray-500">
+                Implemented an innovative competition format by identifying team leaders and collaborating with them to develop project ideas. Students chose teams based on their interest in these ideas, fostering engagement and creativity. Managed all aspects of the event, including graphic design, social media content, and promotional materials. Organized workshops, translated two films (
+                <a href="https://www.murismedia.com/design-thinking" target="_blank" class="underline">"Design & Thinking"</a>
+                and
+                <a href="https://www.murismedia.com/maker" target="_blank" class="underline">"Maker"</a>
+                ), and secured sponsorships from Autodesk and Intel for prizes. The competition resulted in prototypes like a Smart Shopping Cart, Passive Exoskeleton, and VR Helmet with Feedback, and received media coverage, including a feature on local TV news.
+              </p>
+            </li>
+
+            <li class="mb-4 ms-4 extra break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">December 2014</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Ideator and organizer of
+                <a href="https://medium.com/@VladLunachev/%D0%BF%D0%BE%D1%81%D1%82-035-907032f72d44" target="_blank" class="font-semibold underline cursor-pointer">Re:use/cycle Pipeline</a>
+                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Project</span>
+              </h3>
+              <p class="mb-4 text-sm font-normal text-gray-500">Initiated a community-driven recycling program by encouraging citizens to donate unneeded or broken devices and leftover materials to the Makerspace. Organized an educational process based on reverse engineering these donations, providing free materials and valuable learning experiences. The initiative received positive media attention with 10-15 articles published, and successfully established a sustainable pipeline for sorting and repurposing donated items through educational activities.</p>
+            </li>
+
+            <li class="mb-4 ms-4 break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">June 2014 - June 2016</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Co-founder of
+                <a href="https://vk.com/perm_makerspace" target="_blank" class="font-semibold underline cursor-pointer">Perm Makerspace</a>
+                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Non-profit Project</span>
+              </h3>
+              <h4 class="text-sm text-black">First collaborative workspace in Perm city</h4>
+              <p class="mb-4 text-sm font-normal text-gray-500">Established the first makerspaces in Perm. Recruited and united 10 local craftsmen, consolidating $10,000 worth of tools without initial budget investment. Organized the workspace, developed branding and ideology, and facilitated collaboration among members. Conducted research and engaged with other makerspaces globally to implement best practices. Partnered with universities, schools, and workshops, gaining access to approximately $100,000 worth of machinery through collaborations.</p>
+            </li>
+
+            <li class="mb-4 ms-4 break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">2008 - 2015</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Freelance
+                <a href="https://paper.dropbox.com/published/Designs-Art-for-CV--CahlTlrlcBGpAmmHvz6qaUPxBg-3QGHuCYgWNGj0R7Gs3dKQvm" target="_blank" class="font-semibold underline cursor-pointer">Graphic Designer</a>
+                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Employment</span>
+              </h3>
+              <p class="mb-4 text-sm font-normal text-gray-500">Specialized in photo editing, logo design, illustrations, and graffiti art.</p>
+            </li>
+
+            <li class="mb-4 ms-4 extra break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">2008 - 2015</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Founder of
+                <span class="font-semibold">Small Local Distillery</span>
+                <span class="bg-zinc-100 text-zinc-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Small Production</span>
+              </h3>
+              <p class="mb-4 text-sm font-normal text-gray-500">Learned distillation techniques and established a small-scale distillery. Developed an original absinthe recipe and refined it over time. Supplied products to three local bars and built a loyal customer base of approximately 100 regular clients over seven years. Gained extensive experience in production, quality control, and client relations.</p>
+            </li>
+
+            <li class="mb-4 ms-4 extra break-inside-avoid">
+              <div class="absolute w-3.5 h-3.5 bg-gray-200 rounded-full mt-1.5 -start-[0.45rem] border border-white"></div>
+              <time class="mb-1 text-xs font-normal leading-none text-gray-400">2007 - 2008</time>
+              <h3 class="text-base text-gray-900 flex items-center gap-1">
+                Inventor of
+                <a href="https://medium.com/@VladLunachev/story-010-df1f3cf15c4c" target="_blank" class="font-semibold underline cursor-pointer">Rollerblading Frames</a>
+                <span class="bg-zinc-100 text-zinc-800 text-xs font-medium px-2.5 py-0.5 rounded opacity-70">Small Production</span>
+              </h3>
+              <p class="mb-4 text-sm font-normal text-gray-500">Innovated and prototyped rollerblading frames featuring a unique shock-absorption mechanism adaptable to multiple configurations. Received positive industry feedback and international media coverage. Gained valuable experience in product development, prototyping, and industry networking.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Create save as PDF button
+      const saveButton = document.createElement('button');
+      saveButton.type = 'button';
+      saveButton.className = 'fixed top-4 right-4 text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center';
+      saveButton.innerHTML = `
+      <svg class="w-4 h-4 me-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+      </svg>
+      Save as PDF
+    `;
+
+      // Add click handler
+      saveButton.addEventListener('click', () => {
+        window.print();
+      });
+
+      // Add button to document
+      document.body.appendChild(saveButton);
+
+      // Ensure the DOM is fully loaded
+      document.addEventListener('DOMContentLoaded', function () {
+        // Get the current page URL
+        var currentUrl = window.location.href;
+
+        // Create a new QRCode object, targeting the 'qrcode' div
+        var qrcode = new QRCode(document.getElementById('qrcode'), {
+          text: currentUrl,
+          width: 128,
+          height: 128,
+          colorDark: '#374151',
+        });
+      });
+    </script>
+  </body>
+</html>
