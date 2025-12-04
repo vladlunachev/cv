@@ -23,7 +23,8 @@
 
         /* Main resume container - white page with shadow */
         .resume {
-            max-width: 800px;
+            max-width: 750px;
+            min-width: 400px;
             margin: 0 auto;
             padding: 40px 50px;
             background: white;
@@ -139,6 +140,15 @@
         .resume > p:last-child {
             text-align: center;
             margin-top: 16px;
+        }
+
+        /* Responsive: prevent title/date overlap on narrow screens */
+        @media screen and (max-width: 720px) {
+            .job-section .date-line {
+                position: static;
+                text-align: left;
+                margin-bottom: 4px;
+            }
         }
 
         @media print {
