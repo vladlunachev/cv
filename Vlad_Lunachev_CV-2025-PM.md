@@ -13,7 +13,7 @@ Technical product manager combining full-stack development, hardware prototyping
 
 ## Core Strengths
 
-First and zero-principles thinking and innovative problem-solving to find simpler, faster, more efficient ways to achieve results. Proven ability to think outside conventional frameworks and create novel solutions that reduce complexity and accelerate execution. Brings diverse cross-domain experience and a broad perspective from curiosity-driven exploration across multiple industries.
+First and zero-principles thinking and innovative problem-solving to find simpler, faster, more efficient ways to achieve results. Proven ability to think outside conventional frameworks and create novel solutions that reduce complexity and accelerate execution. Known for "obvious-unobvious" inventions and ideas that seem obvious in retrospect but required ingenuity to create. Brings diverse cross-domain experience and a broad perspective from curiosity-driven exploration across multiple industries.
 
 ---
 
