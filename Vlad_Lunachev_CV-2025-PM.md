@@ -1,7 +1,7 @@
 # Vlad Lunachev
 Technical Product Manager | Full-Stack Software & Hardware Development | Founder Experience
 
-Belgrade, Serbia | [v.lunachev@gmail.com](mailto:v.lunachev@gmail.com) | [linkedin.com/in/vladlunachev](https://linkedin.com/in/vladlunachev/) | +381 062 1438039
+Belgrade, Serbia | [v.lunachev@gmail.com](mailto:v.lunachev@gmail.com) | [t.me/vlad_lunachev](https://t.me/vlad_lunachev) | [linkedin.com/in/vladlunachev](https://linkedin.com/in/vladlunachev/) | +381 062 1438039
 
 ---
 
