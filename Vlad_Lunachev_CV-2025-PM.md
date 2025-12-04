@@ -30,7 +30,7 @@ First and zero-principles thinking and innovative problem-solving to find simple
 September 2023 - June 2025
 
 ### Founder | Stealth Startup
-*B2C productivity SaaS*
+*B2C knowledge management SaaS*
 
 **Secured $30K pre-seed investment and built cross-platform desktop application** as solo technical founder, handling all product, engineering, and business development.
 
